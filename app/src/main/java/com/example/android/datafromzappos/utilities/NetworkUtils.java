@@ -17,6 +17,10 @@ package com.example.android.datafromzappos.utilities;
 
 import android.net.Uri;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -83,5 +87,29 @@ public final class NetworkUtils {
         } finally {
             urlConnection.disconnect();
         }
+    }
+
+    public static JSONObject parseJson(String responseFromHttpUrl) {
+        if (responseFromHttpUrl == null) return null;
+        try {
+            JSONObject parentObject = new JSONObject(responseFromHttpUrl);
+            // JSONArray parentArray = parentObject.getJSONArray("results");
+            return parentObject.getJSONArray("results").getJSONObject(0);
+            /**
+             * This is the decelerator of all fields in JSON Object for future use
+             String brandName = finalObject.getString("brandName");
+             String imageUrl = finalObject.getString("thumbnailImageUrl");
+             String productId = finalObject.getString("productId");
+             String originalPrice = finalObject.getString("originalPrice");
+             String sytleId = finalObject.getString("styleId");
+             String price = finalObject.getString("price");
+             String percentOff = finalObject.getString("percentOff");
+             String productUrl = finalObject.getString("productUrl");
+             String productName = finalObject.getString("productName");
+             **/
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

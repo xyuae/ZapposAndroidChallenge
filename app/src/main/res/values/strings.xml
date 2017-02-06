@@ -14,8 +14,10 @@
   limitations under the License.
 -->
 <resources>
-    <string name="app_name">Zappos Query</string>
+    <string name="app_name">ILoveZappos</string>
+    <string name="buy">Add to Cart</string>
     <string name="search">Search</string>
     <string name="error_message">Failed to get results</string>
+    <string name="title_activity_line">LineActivity</string>
     <!--TODO (1) Add a string stating that an error has occurred-->
 </resources>

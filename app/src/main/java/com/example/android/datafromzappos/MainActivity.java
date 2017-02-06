@@ -15,6 +15,7 @@
  */
 package com.example.android.datafromzappos;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.android.datafromzappos.utilities.NetworkUtils;
+
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URL;
@@ -44,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
     // TODO (24) Create a ProgressBar variable to store a reference to the ProgressBar
     private ProgressBar mLoadingIndicatorProgressBar;
 
+    private void showView(JSONObject queryJSONObject) {
+        Intent intent = new Intent(this, LineActivity.class);
+        putExtraData(queryJSONObject);
+        startActivity(intent);
+        // TODO (25) find Bundle optioins
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
