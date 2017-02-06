@@ -89,12 +89,12 @@ public final class NetworkUtils {
         }
     }
 
-    public static JSONObject parseJson(String responseFromHttpUrl) {
+    public static JSONArray parseJson(String responseFromHttpUrl) {
         if (responseFromHttpUrl == null) return null;
         try {
             JSONObject parentObject = new JSONObject(responseFromHttpUrl);
             // JSONArray parentArray = parentObject.getJSONArray("results");
-            return parentObject.getJSONArray("results").getJSONObject(0);
+            return parentObject.getJSONArray("results");
             /**
              * This is the decelerator of all fields in JSON Object for future use
              String brandName = finalObject.getString("brandName");

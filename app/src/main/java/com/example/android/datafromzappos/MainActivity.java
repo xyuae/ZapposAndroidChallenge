@@ -19,6 +19,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,12 +28,16 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.android.datafromzappos.models.ZapposItem;
 import com.example.android.datafromzappos.utilities.NetworkUtils;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,17 +47,22 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mSearchResultsTextView;
 
-    // TODO (12) Create a variable to store a reference to the error message TextView
+    // Create a variable to store a reference to the error message TextView
     private TextView mErrorMessageTextView;
 
-    // TODO (24) Create a ProgressBar variable to store a reference to the ProgressBar
+    //  Create a ProgressBar variable to store a reference to the ProgressBar
     private ProgressBar mLoadingIndicatorProgressBar;
 
     private void showView(JSONObject queryJSONObject) {
-        Intent intent = new Intent(this, LineActivity.class);
-        putExtraData(queryJSONObject);
+        Intent intent = new Intent(this, Main2Activity.class);
+        intent.putExtra("item", queryJSONObject.toString());
         startActivity(intent);
-        // TODO (25) find Bundle optioins
+    }
+    // Create method to pass intent to recyclerView
+    private void showRecyclerView(JSONArray queryJSONArray) {
+        Intent intent = new Intent(this, RecyclerView.class);
+        intent.putExtra("item", queryJSONArray.toString());
+        startActivity(intent);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,7 +136,9 @@ public class MainActivity extends AppCompatActivity {
             if (zapposSearchResults != null && !zapposSearchResults.equals("")) {
                 // TODO (17) Call showJsonDataView if we have valid, non-null results
                 showJsonDataView();
-                mSearchResultsTextView.setText(zapposSearchResults);
+                // mSearchResultsTextView.setText(zapposSearchResults);
+                showRecyclerView(NetworkUtils.parseJson(zapposSearchResults));
+                // showView(NetworkUtils.parseJson(zapposSearchResults));
             } else {
                 showErrorMessage();
             }
