@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/recyclerView">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerView"
+    tools:context="com.example.android.datafromzappos.adapter_item">
     <data>
         <variable
             name = "zapposItem"
@@ -35,7 +37,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{zapposItem.productName}"
+            android:text="@{ zapposItem.productName }"
             android:textSize="18dp"/>
 
     </LinearLayout>
