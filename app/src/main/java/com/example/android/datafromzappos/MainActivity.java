@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
     // Create method to pass intent to recyclerView
     private void showRecyclerView(JSONArray queryJSONArray) {
-        Intent intent = new Intent(this, RecyclerView.class);
+        Intent intent = new Intent(this, RecyclerViewActivity.class);
         intent.putExtra("item", queryJSONArray.toString());
         startActivity(intent);
     }

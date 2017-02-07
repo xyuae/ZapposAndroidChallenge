@@ -20,7 +20,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.adapter_item);
+        setContentView(R.layout.recycler_view);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         ArrayList<ZapposItem> objects = new ArrayList<>();
