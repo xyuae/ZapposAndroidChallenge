@@ -6,7 +6,8 @@
         android:id="@+id/action_shopping_cart"
         android:icon="@drawable/ic_shopping_cart_white_24dp"
         android:title="@string/shopping_cart"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        />
 
     <!-- Favorite, click to show endorse -->
     <item android:id="@+id/action_favorite"

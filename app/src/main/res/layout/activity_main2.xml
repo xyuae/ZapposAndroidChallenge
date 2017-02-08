@@ -10,7 +10,8 @@
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/myCoordinatorLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,15 +27,6 @@
                     android:layout_height="match_parent"
                     android:id="@+id/productImageView"
                     app:imageUrl = "@{zapposItem.imageUrl}" />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/buy"
-                    android:id="@+id/buy"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="60dp"
-                    android:padding="10dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -68,5 +60,15 @@
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_shopping_cart_black_24dp"
+            android:id="@+id/fab"
+            android:onClick="fabShoppingCart"
+            />
     </android.support.design.widget.CoordinatorLayout>
 </layout>
