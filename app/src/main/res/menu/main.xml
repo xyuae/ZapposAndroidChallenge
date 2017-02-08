@@ -20,5 +20,6 @@
         android:id="@+id/action_search"
         android:orderInCategory="1"
         app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_search_black_24dp"
         android:title="@string/search"/>
 </menu>

@@ -20,5 +20,8 @@
     <string name="error_message">Failed to get results, please try again</string>
     <string name="title_activity_line">LineActivity</string>
     <string name="hintQuery">Enter a query, then click Search</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="main2activity">Main Activity 2</string>
+    <string name="action_favorite">Favorite</string>
     <!--TODO (1) Add a string stating that an error has occurred-->
 </resources>
