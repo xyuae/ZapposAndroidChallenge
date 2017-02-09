@@ -49,12 +49,13 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("item", queryJSONObject.toString());
         startActivity(intent);
     }
-    // Create method to pass intent to recyclerView
+    /** Create method to pass intent to recyclerView
     private void showRecyclerView(JSONArray queryJSONArray) {
         Intent intent = new Intent(this, RecyclerViewActivity.class);
         intent.putExtra("item", queryJSONArray.toString());
         startActivity(intent);
     }
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

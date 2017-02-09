@@ -28,6 +28,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.datafromzappos.MainActivity" />
         </activity>
-        <activity android:name=".RecyclerViewActivity"></activity>
+        <!--<activity android:name=".RecyclerViewActivity"></activity> -->
     </application>
 </manifest>

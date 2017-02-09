@@ -51,7 +51,7 @@ public class Main2Activity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.product, menu);
         return true;
     }
-
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemThatWasClickedId = item.getItemId();
         if (itemThatWasClickedId == R.id.action_favorite) {
@@ -70,7 +70,7 @@ public class Main2Activity extends AppCompatActivity {
 
     public void fabShoppingCart(View view) {
         Snackbar.make(view, "Item is added to shopping cart", Snackbar.LENGTH_LONG).show();
-        // MenuItem item = (MenuItem) findViewById(R.id.action_shopping_cart);
+        // MenuItem item = (MenuItem) getSupportActionBar().setIcon(R.id.action_shopping_cart);
         // item.setIcon(R.drawable.ic_shopping_cart_black_24dp);
     }
 }

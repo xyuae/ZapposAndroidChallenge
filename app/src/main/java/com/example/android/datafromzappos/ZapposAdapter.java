@@ -1,3 +1,4 @@
+/*
 package com.example.android.datafromzappos;
 
 import android.databinding.DataBindingUtil;
@@ -12,8 +13,8 @@ import java.util.ArrayList;
 
 /**
  * Created by Xiaojun(Tony) on 2/6/2017.
- */
-// TODO use databinding and picasso
+ *
+// Used databinding and picasso
 public class ZapposAdapter extends RecyclerView.Adapter<ZapposItemHolder> {
     private ArrayList<ZapposItem> items;
 
@@ -40,3 +41,4 @@ public class ZapposAdapter extends RecyclerView.Adapter<ZapposItemHolder> {
     }
 
 }
+*/
