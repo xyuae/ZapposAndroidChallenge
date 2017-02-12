@@ -49,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("item", queryJSONObject.toString());
         startActivity(intent);
     }
-    /** Create method to pass intent to recyclerView
+    // Create method to pass intent to recyclerView
     private void showRecyclerView(JSONArray queryJSONArray) {
         Intent intent = new Intent(this, RecyclerViewActivity.class);
         intent.putExtra("item", queryJSONArray.toString());
         startActivity(intent);
     }
-     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,9 +125,8 @@ public class MainActivity extends AppCompatActivity {
             {
                 // set error message to invisible and show the product page if we have valid, non-null results
                 showJsonDataView();
-                // mSearchResultsTextView.setText(zapposSearchResults);
-                // showRecyclerView(NetworkUtils.parseJson(zapposSearchResults));
-                showFirstView(NetworkUtils.parseJsonFirstItem(zapposSearchResults));
+                // showFirstView(NetworkUtils.parseJsonFirstItem(zapposSearchResults));
+                showRecyclerView(NetworkUtils.parseJson(zapposSearchResults));
             } else {
                 // Call showErrorMessage if the result is null in onPostExecute
                 showErrorMessage();

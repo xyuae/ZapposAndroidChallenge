@@ -1,4 +1,4 @@
-/**package com.example.android.datafromzappos;
+package com.example.android.datafromzappos;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -48,4 +48,3 @@ public class RecyclerViewActivity extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
     }
 }
-**/
